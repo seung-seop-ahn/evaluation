@@ -14,7 +14,9 @@
         "calculator:eval:llm": "tsx --env-file=.env src/calculator/llm.evaluate.ts",
         "rag:upload": "tsx --env-file=.env src/documents/dataset.ts",
         "rag:eval": "tsx --env-file=.env src/documents/evaluation.ts",
-        "rag:eval:score": "tsx --env-file=.env src/documents/evaluation-score.ts"
+        "rag:eval:score": "tsx --env-file=.env src/documents/evaluation-score.ts",
+        "tools:upload": "tsx --env-file=.env src/tools/dataset.ts",
+        "tools:eval": "tsx --env-file=.env src/tools/evaluation.ts"
     },
     "dependencies": {
         "@langchain/core": "^1.2.9",
@@ -22,6 +24,7 @@
         "@langchain/langgraph-checkpoint": "^1.1.5",
         "@langchain/langgraph-sdk": "^1.10.2",
         "@langchain/openai": "^1.5.11",
+        "@langchain/tavily": "^1.2.0",
         "csv-stringify": "^6.8.3",
         "dedent": "^1.7.2",
         "deepagents": "^1.13.3",
