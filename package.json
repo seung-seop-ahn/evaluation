@@ -1,0 +1,40 @@
+{
+    "name": "evaluation",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "typecheck": "tsc --noEmit",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "calculator:upload": "tsx --env-file=.env src/calculator/dataset.ts",
+        "calculator:eval:manual": "tsx --env-file=.env src/calculator/manual.evaluate.ts",
+        "calculator:eval:llm": "tsx --env-file=.env src/calculator/llm.evaluate.ts"
+    },
+    "dependencies": {
+        "@langchain/core": "^1.2.9",
+        "@langchain/langgraph": "^1.4.14",
+        "@langchain/langgraph-checkpoint": "^1.1.5",
+        "@langchain/langgraph-sdk": "^1.10.2",
+        "@langchain/openai": "^1.5.11",
+        "csv-stringify": "^6.8.3",
+        "dedent": "^1.7.2",
+        "deepagents": "^1.13.3",
+        "langchain": "^1.5.10",
+        "langsmith": "^0.9.0",
+        "zod": "^4.5.4"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@types/node": "^26.4.1",
+        "eslint": "^10.10.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-simple-import-sort": "^14.0.0",
+        "prettier": "^3.9.6",
+        "tsx": "^4.23.13",
+        "typescript": "<6.1",
+        "typescript-eslint": "^8.69.0"
+    }
+}
