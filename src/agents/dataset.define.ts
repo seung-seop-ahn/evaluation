@@ -30,11 +30,12 @@ export const DATASET_RESPONSE_SCHEMA = z.object({
                 answer: z
                     .string()
                     .describe('The correct answer to the question. It must be based only on the given input.'),
+                // OpenAI structured outputs require every field, so use nullable instead of optional
                 source: z
                     .string()
-                    .optional()
+                    .nullable()
                     .describe(
-                        'The exact sentence or passage from the input that contains the answer. Copy it word for word, without changing anything. Leave this field empty if the input has no such passage.',
+                        'The exact sentence or passage from the input that contains the answer. Copy it word for word, without changing anything. Set to null if the input has no such passage.',
                     ),
             }),
         )

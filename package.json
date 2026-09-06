@@ -11,7 +11,10 @@
         "format:check": "prettier --check .",
         "calculator:upload": "tsx --env-file=.env src/calculator/dataset.ts",
         "calculator:eval:manual": "tsx --env-file=.env src/calculator/manual.evaluate.ts",
-        "calculator:eval:llm": "tsx --env-file=.env src/calculator/llm.evaluate.ts"
+        "calculator:eval:llm": "tsx --env-file=.env src/calculator/llm.evaluate.ts",
+        "rag:upload": "tsx --env-file=.env src/documents/dataset.ts",
+        "rag:eval": "tsx --env-file=.env src/documents/evaluation.ts",
+        "rag:eval:score": "tsx --env-file=.env src/documents/evaluation-score.ts"
     },
     "dependencies": {
         "@langchain/core": "^1.2.9",
@@ -24,6 +27,7 @@
         "deepagents": "^1.13.3",
         "langchain": "^1.5.10",
         "langsmith": "^0.9.0",
+        "pdf-parse": "^2.4.5",
         "zod": "^4.5.4"
     },
     "devDependencies": {
